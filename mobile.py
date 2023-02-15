@@ -57,7 +57,7 @@ class Mobile:
     def nr_ball_select_func(self):
         self.nr_select = tkinter.Frame(self.data_frame)
         self.nr_select.pack(side="top", fill="both", anchor="nw")
-        ttk.Label(self.nr_select, text="请选择球磨机号：", font=("YouYuan", 40)).pack(side="top", fill="both", ipady=30)
+        ttk.Label(self.nr_select, text="请选择球磨机号：", font=("YouYuan", 40)).pack(side="top", fill="both",anchor="center", ipady=30)
         option = ['01号球磨机', '02号球磨机', '03号球磨机', '04号球磨机', '05号球磨机', '06号球磨机', '07号球磨机', '08号球磨机', '09号球磨机', '10号球磨机', '11号球磨机', '12号球磨机', '13号球磨机', '14号球磨机', '15号球磨机', '16号球磨机', '17号球磨机', '18号球磨机', '19号球磨机','20号球磨机']
         tmp = tkinter.OptionMenu(self.nr_select, self.nr_ball_option_var, *option, command=self.nr_ball_comf_func )
         tmp.config(width=20, height=1, font=("YouYuan", 40))
