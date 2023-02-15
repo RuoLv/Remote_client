@@ -39,7 +39,7 @@ class loader_db:
 
     def loop(self):
         self.sched = BackgroundScheduler()
-        self.sched.add_job(self._keep_alive, 'interval', seconds=5)
+        self.sched.add_job(self._keep_alive, 'interval', seconds=10)
         self.sched.start()
     
     def query(self, sql):
