@@ -1,0 +1,187 @@
+Wed, 15 Feb 2023 13:14:10-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:14:10
+Wed, 15 Feb 2023 13:14:10-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:14:19-root-loger.py-[line:123]-INFO-[日志信息]: close
+Wed, 15 Feb 2023 13:14:19-root-loger.py-[line:123]-INFO-[日志信息]: shutdown
+Wed, 15 Feb 2023 13:14:19-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:16:54-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:16:54
+Wed, 15 Feb 2023 13:16:54-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:16:59-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:16:59-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:16:59-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:21:59-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:21:59
+Wed, 15 Feb 2023 13:21:59-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:22:14-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:22:19-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:22:20-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:22:20-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:22:20-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:25:31-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:25:31
+Wed, 15 Feb 2023 13:25:31-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:25:34-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:25:34-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:25:34-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:25:58-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:25:58
+Wed, 15 Feb 2023 13:25:58-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:26:13-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:18-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:23-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:28-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:33-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:38-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:43-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:48-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:53-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:26:58-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:03-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:08-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:13-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:18-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:23-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:28-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:33-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:38-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:43-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:48-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:53-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:27:58-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:03-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:08-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:13-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:18-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:23-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:28-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:33-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:38-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:43-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:48-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:53-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:28:58-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:29:02-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:29:02-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:29:02-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:30:54-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:30:54
+Wed, 15 Feb 2023 13:30:54-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:31:01-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:31:01-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:31:01-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:31:09-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:31:09
+Wed, 15 Feb 2023 13:31:09-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:31:20-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:31:20-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:31:20-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:31:27-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:31:27
+Wed, 15 Feb 2023 13:31:27-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:31:35-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:31:35-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:31:35-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:31:55-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:31:55
+Wed, 15 Feb 2023 13:31:55-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:32:07-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:32:07-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:32:07-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:32:14-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:32:14
+Wed, 15 Feb 2023 13:32:14-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:32:31-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:32:31-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:32:31-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:32:45-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:32:45
+Wed, 15 Feb 2023 13:32:45-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:33:13-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:33:13-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:33:13-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:33:16-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:33:16
+Wed, 15 Feb 2023 13:33:16-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:33:40-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:33:40-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:33:40-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:33:42-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:33:42
+Wed, 15 Feb 2023 13:33:42-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:33:57-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:34:01-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:34:01-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:34:01-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:34:04-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:34:04
+Wed, 15 Feb 2023 13:34:04-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:34:17-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:34:17-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:34:17-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:35:25-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:35:25
+Wed, 15 Feb 2023 13:35:25-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:35:40-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:35:45-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:35:50-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:35:55-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:00-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:05-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:10-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:15-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:20-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:23-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:36:23-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:36:23-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:36:24-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:36:24
+Wed, 15 Feb 2023 13:36:24-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:36:39-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:44-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:49-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:54-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:36:59-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:37:03-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:37:03-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:37:03-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:37:05-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:37:05
+Wed, 15 Feb 2023 13:37:05-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:37:11-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:37:11-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:37:11-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:49:41-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:49:41
+Wed, 15 Feb 2023 13:49:41-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:49:46-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:49:46-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:49:46-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:52:02-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:52:02
+Wed, 15 Feb 2023 13:52:02-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:52:14-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:52:14-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:52:14-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:52:18-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:52:18
+Wed, 15 Feb 2023 13:52:18-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:52:28-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:52:33-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:52:38-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:52:43-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:52:48-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:52:48-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:52:48-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:52:48-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:52:50-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:52:50
+Wed, 15 Feb 2023 13:52:50-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:53:00-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:53:00-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:53:00-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:53:02-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:53:02
+Wed, 15 Feb 2023 13:53:02-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:53:12-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:53:17-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:53:17-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:53:17-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
+Wed, 15 Feb 2023 13:55:14-root-loger.py-[line:123]-INFO-[日志信息]: 数据更新时间:2023-02-15 13:55:14
+Wed, 15 Feb 2023 13:55:14-root-loger.py-[line:123]-INFO-[日志信息]: 数据库连接成功
+Wed, 15 Feb 2023 13:55:24-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:29-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:34-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:39-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:44-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:49-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:54-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:55:59-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:04-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:09-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:14-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:19-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:24-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:29-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:34-root-loger.py-[line:125]-DEBUG-[日志信息]: _keep_alive
+Wed, 15 Feb 2023 13:56:36-root-loger.py-[line:125]-DEBUG-[日志信息]: sql connection close
+Wed, 15 Feb 2023 13:56:36-root-loger.py-[line:125]-DEBUG-[日志信息]: scheduler shutdown
+Wed, 15 Feb 2023 13:56:36-root-loger.py-[line:123]-INFO-[日志信息]: 退出程序
