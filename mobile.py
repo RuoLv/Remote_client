@@ -102,7 +102,7 @@ class Mobile:
         print(item)
         index = int(item)
         print(self.data[index])
-        sql = "UPDATE `{}` SET `status`='作业中' `nr_ball`={} WHERE `id`={};".format(db_name,self.nr_ball_nr, self.data[index]['id'])
+        sql = "UPDATE `{}` SET `status`='作业中',`nr_ball`={} WHERE `id`={};".format(db_name,self.nr_ball_nr, self.data[index]['id'])
         print(sql)
         #self.db.query(sql)
         #self.display.pack_forget()
