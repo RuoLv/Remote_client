@@ -19,7 +19,7 @@ default_formats = {
 }
 log = HandleLog()
 
-version = "Ver. 0.3"
+version = "Ver. 0.4"
 class Mobile:
     def __init__(self) -> None:
         self.root = tkinter.Tk()
@@ -30,9 +30,10 @@ class Mobile:
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
         self.root.geometry("600x1024")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
+        self.root.resizable(0, 0)
         self.nr_ball_option_var = tkinter.StringVar()
         self.interface()
-        self.db = base.loader_db(user="sijiyihao", passwd="anquandiyi")
+        self.db = base.loader_db(user="sijiyihao", passwd="anquandiyi",db_name=db_name)
         if self.db.connect():
             self.db_status.set("数据库连接成功")
             if self.data_update() == -1:
@@ -101,33 +102,40 @@ class Mobile:
         self.tv.heading('status', text='状态')
         self.tv.column('status',  width=200,anchor='center')
         # 修改treeview标题的字体
-        ttk.Label(self.display, text="双击选择配方，右侧为滚动条",font=("YouYuan",20)).pack(side="top", fill="x")
+        ttk.Label(self.display, text="选择配方后点击 确定选择 ",font=("YouYuan",20)).pack(side="top", fill="x")
+        ttk.Button(self.display, text="刷新", command=self.data_update).pack(side="bottom", fill="x",pady=5)
+        ttk.Button(self.display, text="确认选择", command=self.on_tree_select).pack(side="bottom", fill="x",pady=5)
         self.tv.pack(side="left", fill="y")
-        self.tv.bind("<Double-1>", self.on_tree_select)
         self.ybar.config(command=self.tv.yview)
         self.ybar.pack(side="right", fill="y")
 
-    def on_tree_select(self, event):
+    def on_tree_select(self):
         if self.tv.focus() == "":
             return
         item = self.tv.focus()
-        print(item)
         index = int(item)
-        print(self.data[index])
-        sql = "UPDATE `{}` SET `status`='作业中',`nr_ball`={} WHERE `id`={};".format(db_name,self.nr_ball_nr, self.data[index]['id'])
-        print(sql)
-        #self.db.query(sql)
+        ori_data = self.data[index]
+        if ori_data['status'] == "作业中" and ori_data['nr_ball'] != int(self.nr_ball_nr):
+            msgbox.showerror("错误", "该配方已有铲车作业中，如有特殊情况请联系管理员")
+            return
+            pass
+        self.db.fresh_status(ori_data['id'],self.nr_ball_nr)
         self.display.pack_forget()
         self.working_frame = tkinter.Frame(self.data_frame)
         self.working_frame.pack(side="top", fill="both", expand=1)
         self.working_frame.pack_propagate(0)
-        for i in range (0,10):
-            ttk.Button(self.working_frame, text="材料{}".format(i*3)).grid(row=i, column=0,sticky="nsew")
-            ttk.Button(self.working_frame, text="材料{}".format(i*3+1)).grid(row=i, column=1,sticky="nsew")
-            ttk.Button(self.working_frame, text="材料{}".format(i*3+2)).grid(row=i, column=2,sticky="nsew")
+        tmp=[]
+        for i in range (30):
+            print(i)
+            if ori_data['m_'+str(i)] == None:
+                print(ori_data['m_'+str(i)])
+                break
+            tmp.append(ori_data['m_'+str(i)].split(';'))
+            print(tmp)
+            ttk.Button(self.working_frame, text=self.mat[int(tmp[i][0])], command=lambda :self.material_select(tmp[i])).grid(row=i, column=0,sticky="nsew",padx=4,pady=4)
 
-        
-        pass
+    def material_select(self, id):
+        print(id)
 
     def rev_data_format(self, data):
         id = data['id']
@@ -148,10 +156,16 @@ class Mobile:
         except:
             self.db_status.set("数据库连接失败")
             return -1
+        child = self.tv.get_children()
         for i,n in enumerate(self.data):
-            self.tv.insert('', 'end', id=i, values=self.rev_data_format(n))
-        if len(self.tv.get_children()) > 30:
-            self.ybar.pack(side="right", fill="y")
+            id = str(n["id"])
+            if id in child:
+                self.tv.set(id, column='status', value=n['status'])
+                self.tv.set(id, column='name', value=n['name'])
+                self.tv.set(id, column='id', value=id)
+            else:
+                self.tv.insert('', 'end', id=i, values=self.rev_data_format(n))
+
         log.info("数据更新时间:"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 

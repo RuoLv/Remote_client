@@ -63,3 +63,9 @@ class loader_db:
         ret = self.cursor.fetchall()
         lock.release()
         return ret
+
+    def fresh_status(self,id,nr_ball):
+        lock.acquire()
+        self.cursor.execute("UPDATE `{}` SET `status`='作业中',`nr_ball`={} WHERE `id`={};".format(self.db_name,nr_ball,id))
+        lock.release()
+        return True
