@@ -27,7 +27,10 @@ class Mobile:
         self.db = base.loader_db(user="sijiyihao", passwd="anquandiyi")
         if self.db.connect():
             self.db_status.set("数据库连接成功")
-            self.data_update()
+            if self.data_update() == -1:
+                msgbox.showerror("错误", "暂无今日数据，请联系配方员添加任务单！")
+                self.root.destroy()
+                self.db.cleanup()
             log.info("数据库连接成功")
         else:
             log.error("数据库连接失败")
@@ -126,10 +129,12 @@ class Mobile:
         return ret
 
     def data_update(self):
-        self.data = self.db.query("SELECT * FROM `{}`;".format(db_name))
-
+        try:
+            self.data = self.db.query("SELECT * FROM `{}`;".format(db_name))
+        except:
+            self.db_status.set("数据库连接失败")
+            return -1
         for i,n in enumerate(self.data):
-            id = i
             self.tv.insert('', 'end', id=i, values=self.rev_data_format(n))
         if len(self.tv.get_children()) > 30:
             self.ybar.pack(side="right", fill="y")
