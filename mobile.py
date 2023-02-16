@@ -18,7 +18,7 @@ default_formats = {
     'log_format': '%(asctime)s-%(name)s-%(filename)s-[line:%(lineno)d]-%(levelname)s-[日志信息]: %(message)s'
 }
 log = HandleLog()
-log.formats = default_formats
+
 version = "Ver. 0.1"
 class Mobile:
     def __init__(self) -> None:
@@ -26,7 +26,7 @@ class Mobile:
         self.db_status = tkinter.StringVar()
        
         sv_ttk.use_light_theme()
-        self.root.title("喂料机配方状态-移动端{}".format(version))
+        self.root.title("喂料机配方状态-移动端 {}".format(version))
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
         self.root.geometry("600x1024")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
