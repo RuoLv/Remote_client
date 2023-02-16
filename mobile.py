@@ -19,14 +19,14 @@ default_formats = {
 }
 log = HandleLog()
 log.formats = default_formats
-
+version = "Ver. 0.1"
 class Mobile:
     def __init__(self) -> None:
         self.root = tkinter.Tk()
         self.db_status = tkinter.StringVar()
        
         sv_ttk.use_light_theme()
-        self.root.title("喂料机配方状态-移动端")
+        self.root.title("喂料机配方状态-移动端{}".format(version))
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
         self.root.geometry("600x1024")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
@@ -83,7 +83,7 @@ class Mobile:
             self.nr_select.pack_forget()
             self.display.pack(side="left", fill="y", anchor="sw")
         else:
-            self.mr_ball_option_var.set("")
+            self.nr_ball_option_var.set("")
 
     def treev(self):
         ttk.Label(self.data_frame, textvariable=self.db_status).pack(
