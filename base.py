@@ -34,7 +34,9 @@ class loader_db:
 
     def _keep_alive(self):
         if time.time() - self.last_op_time > 10:
+            lock.acquire()
             self.conn.ping(reconnect=True)
+            lock.release()
             log.debug('_keep_alive')
 
     def loop(self):
@@ -54,3 +56,9 @@ class loader_db:
         log.debug('sql connection close')
         self.sched.shutdown()
         log.debug('scheduler shutdown')
+
+    def update_data(self, db_name):
+        lock.acquire()
+        ret = self.cursor.execute("SELECT * FROM {};".format(db_name))
+        lock.release()
+        return ret

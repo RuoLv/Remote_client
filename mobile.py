@@ -139,7 +139,7 @@ class Mobile:
 
     def data_update(self):
         try:
-            self.data = self.db.query("SELECT * FROM `{}`;".format(db_name))
+            self.data = self.db.update_data(db_name)
         except:
             self.db_status.set("数据库连接失败")
             return -1
