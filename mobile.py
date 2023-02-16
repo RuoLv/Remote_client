@@ -23,7 +23,6 @@ class Mobile:
         self.root.geometry("600x1024")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
         self.nr_ball_option_var = tkinter.StringVar()
-
         self.interface()
         self.db = base.loader_db(user="sijiyihao", passwd="anquandiyi")
         if self.db.connect():
@@ -34,6 +33,7 @@ class Mobile:
             log.error("数据库连接失败")
             msgbox.showerror("错误", "数据库连接失败，请联系管理员！")
             self.root.quit()
+        self.mat= self.db.update_material()
         ttk.Style().configure("TButton", font=("YouYuan", 40))
         self.root.mainloop()    
     
@@ -57,7 +57,7 @@ class Mobile:
     def nr_ball_select_func(self):
         self.nr_select = tkinter.Frame(self.data_frame)
         self.nr_select.pack(side="top", fill="both", anchor="nw")
-        ttk.Label(self.nr_select, text="请选择球磨机号：", font=("YouYuan", 40)).pack(side="top", fill="both",anchor="center", ipady=30)
+        ttk.Label(self.nr_select, text="请选择球磨机号：", font=("YouYuan", 40)).pack(side="top", fill="both", ipady=30,padx=30)
         option = ['01号球磨机', '02号球磨机', '03号球磨机', '04号球磨机', '05号球磨机', '06号球磨机', '07号球磨机', '08号球磨机', '09号球磨机', '10号球磨机', '11号球磨机', '12号球磨机', '13号球磨机', '14号球磨机', '15号球磨机', '16号球磨机', '17号球磨机', '18号球磨机', '19号球磨机','20号球磨机']
         tmp = tkinter.OptionMenu(self.nr_select, self.nr_ball_option_var, *option, command=self.nr_ball_comf_func )
         tmp.config(width=20, height=1, font=("YouYuan", 40))
@@ -105,7 +105,11 @@ class Mobile:
         sql = "UPDATE `{}` SET `status`='作业中',`nr_ball`={} WHERE `id`={};".format(db_name,self.nr_ball_nr, self.data[index]['id'])
         print(sql)
         #self.db.query(sql)
-        #self.display.pack_forget()
+        self.display.pack_forget()
+        self.working_frame = tkinter.Frame(self.data_frame)
+        self.working_frame.pack(side="left", fill="y", anchor="sw")
+        self.working_frame.pack_propagate(0)
+        
         pass
 
     def rev_data_format(self, data):
