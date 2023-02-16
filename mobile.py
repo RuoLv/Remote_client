@@ -19,7 +19,7 @@ default_formats = {
 }
 log = HandleLog()
 
-version = "Ver. 0.2"
+version = "Ver. 0.3"
 class Mobile:
     def __init__(self) -> None:
         self.root = tkinter.Tk()
