@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=球磨车载端
+Type=Application
+Exec=bash /home/lemon/Remote_client/start.sh
+Icon=/home/lemon/Remote_client/icon.png
+Terminal = True
+MimeType=text/plain
