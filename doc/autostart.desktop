@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=球磨车载端_自动运行
+Type=Application
+Exec=bash /home/lemon/Remote_client/doc/autostart.sh
+Icon=/home/lemon/Remote_client/icon.png
+Terminal = True

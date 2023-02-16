@@ -119,8 +119,13 @@ class Mobile:
         #self.db.query(sql)
         self.display.pack_forget()
         self.working_frame = tkinter.Frame(self.data_frame)
-        self.working_frame.pack(side="left", fill="y", anchor="sw")
+        self.working_frame.pack(side="top", fill="both", expand=1)
         self.working_frame.pack_propagate(0)
+        for i in range (0,10):
+            ttk.Button(self.working_frame, text="材料{}".format(i*3)).grid(row=i, column=0,sticky="nsew")
+            ttk.Button(self.working_frame, text="材料{}".format(i*3+1)).grid(row=i, column=1,sticky="nsew")
+            ttk.Button(self.working_frame, text="材料{}".format(i*3+2)).grid(row=i, column=2,sticky="nsew")
+
         
         pass
 
