@@ -8,7 +8,7 @@ a = Analysis(
     ['mobile.py'],
     pathex=[],
     binaries=[],
-    datas=[('/home/lemon/.local/lib/python3.9/site-packages/sv_ttk','sv_ttk'),('/home/lemon/lo/mobile_cl/icon.png','.')],
+    datas=[('/home/lemon/.local/lib/python3.9/site-packages/sv_ttk','sv_ttk'),('icon.png','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
