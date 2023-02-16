@@ -35,12 +35,13 @@ class HandleLog:
     最后再将日志处理程序记录到记录器（addHandler）
     """
 
-    def __init__(self):
+    def __init__(self, formats = None):
         self.__now_time = datetime.now().strftime('%Y-%m-%d')  # 当前日期格式化
         self.__all_log_path = os.path.join(log_path, self.__now_time + "-all" + ".log")  # 收集所有日志信息文件
         self.__error_log_path = os.path.join(log_path, self.__now_time + "-error" + ".log")  # 收集错误日志信息文件
         self.__logger = logging.getLogger()  # 创建日志记录器
         self.__logger.setLevel(logging.DEBUG)  # 设置默认日志记录器记录级别
+        self.__formats=formats
 
     @staticmethod
     def __init_logger_handler(log_path):
@@ -89,12 +90,12 @@ class HandleLog:
         console_handle.setFormatter(formatter)
 
     @staticmethod
-    def __set_log_formatter(file_handler):
+    def __set_log_formatter(file_handler,formats=None):
         """
         设置日志输出格式-日志文件
         :param file_handler: 日志记录器
         """
-        formatter = logging.Formatter(default_formats["log_format"], datefmt='%a, %d %b %Y %H:%M:%S')
+        formatter = logging.Formatter(formats["log_format"] if formats else default_formats["log_format"], datefmt='%a, %d %b %Y %H:%M:%S')
         file_handler.setFormatter(formatter)
 
     @staticmethod
@@ -111,8 +112,8 @@ class HandleLog:
         error_logger_handler = self.__init_logger_handler(self.__error_log_path)
         console_handle = self.__init_console_handle()
 
-        self.__set_log_formatter(all_logger_handler)  # 设置日志格式
-        self.__set_log_formatter(error_logger_handler)
+        self.__set_log_formatter(all_logger_handler,self.__formats)  # 设置日志格式
+        self.__set_log_formatter(error_logger_handler,self.__formats)
         self.__set_color_formatter(console_handle, log_colors_config)
 
         self.__set_log_handler(all_logger_handler)  # 设置handler级别并添加到logger收集器
@@ -151,3 +152,6 @@ class HandleLog:
 
     def critical(self, message):
         self.__console('critical', message)
+    
+    def format(self,format):
+        self.__formats=format

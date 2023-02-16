@@ -8,9 +8,17 @@ import tkinter.messagebox as msgbox
 import base
 import os
 
-log = HandleLog()
+
 logo_path = os.path.join(os.path.dirname(__file__), 'icon.png')
 db_name = "loader_temp_" + time.strftime("%Y%m%d", time.localtime())
+default_formats = {
+    # 终端输出格式
+    'color_format': '%(log_color)s%(asctime)s-%(name)s-%(filename)s-[line:%(lineno)d]-%(levelname)s-[日志信息]: %(message)s',
+    # 日志输出格式
+    'log_format': '%(asctime)s-%(name)s-%(filename)s-[line:%(lineno)d]-%(levelname)s-[日志信息]: %(message)s'
+}
+log = HandleLog()
+log.formats = default_formats
 
 class Mobile:
     def __init__(self) -> None:
@@ -31,6 +39,7 @@ class Mobile:
                 msgbox.showerror("错误", "暂无今日数据，请联系配方员添加任务单！")
                 self.root.destroy()
                 self.db.cleanup()
+                exit()
             log.info("数据库连接成功")
         else:
             log.error("数据库连接失败")
@@ -74,7 +83,7 @@ class Mobile:
             self.nr_select.pack_forget()
             self.display.pack(side="left", fill="y", anchor="sw")
         else:
-            self.nr_ball.set("")
+            self.mr_ball_option_var.set("")
 
     def treev(self):
         ttk.Label(self.data_frame, textvariable=self.db_status).pack(
