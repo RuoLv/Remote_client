@@ -59,6 +59,7 @@ class loader_db:
 
     def update_data(self, db_name):
         lock.acquire()
-        ret = self.cursor.execute("SELECT * FROM {};".format(db_name))
+        self.cursor.execute("SELECT * FROM {};".format(db_name))
+        ret = self.cursor.fetchall()
         lock.release()
         return ret
