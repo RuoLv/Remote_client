@@ -19,7 +19,7 @@ default_formats = {
 }
 log = HandleLog()
 
-version = "Ver. 0.4"
+version = "Ver. 0.6"
 class Mobile:
     def __init__(self) -> None:
         self.root = tkinter.Tk()
@@ -37,6 +37,7 @@ class Mobile:
         if self.db.connect():
             self.db_status.set("数据库连接成功")
             if self.data_update() == -1:
+                self.root.withdraw()
                 msgbox.showerror("错误", "暂无今日数据，请联系配方员添加任务单！")
                 self.root.destroy()
                 self.db.cleanup()
