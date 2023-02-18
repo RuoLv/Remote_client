@@ -7,7 +7,7 @@ from loger import HandleLog
 import tkinter.messagebox as msgbox
 import base
 import os
-
+from functools import partial
 
 logo_path = os.path.join(os.path.dirname(__file__), 'icon.png')
 db_name = "loader_temp_" + time.strftime("%Y%m%d", time.localtime())
@@ -26,9 +26,9 @@ class Mobile:
         self.db_status = tkinter.StringVar()
        
         sv_ttk.use_light_theme()
-        self.root.title("喂料机配方状态-移动端 {}".format(version))
+        self.root.title("喂料机配方-移动端 {}".format(version))
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
-        self.root.geometry("600x1024")
+        self.root.geometry("600x1004")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
         self.root.resizable(0, 0)
         self.nr_ball_option_var = tkinter.StringVar()
@@ -121,19 +121,27 @@ class Mobile:
             pass
         self.db.fresh_status(ori_data['id'],self.nr_ball_nr)
         self.display.pack_forget()
-        self.working_frame = tkinter.Frame(self.data_frame)
+
+
+        canvas = tkinter.Canvas(self.data_frame,scrollregion=(0,0,520,1520))
+        canvas.pack(side="top", fill="both", expand=1)
+        self.working_frame = tkinter.Frame(canvas,bg="red")
         self.working_frame.pack(side="top", fill="both", expand=1)
         self.working_frame.pack_propagate(0)
+        vbar = tkinter.Scrollbar(canvas, orient='vertical', command=canvas.yview,width=60)
+        canvas.yview_moveto(0)
+        vbar.pack(side='right', fill='y')
+        canvas.configure(yscrollcommand=vbar.set)
+        canvas.create_window(0, 0, window=self.working_frame, anchor='nw')
         tmp=[]
         for i in range (30):
-            print(i)
             if ori_data['m_'+str(i)] == None:
                 print(ori_data['m_'+str(i)])
                 break
             tmp.append(ori_data['m_'+str(i)].split(';'))
-            print(tmp)
-            ttk.Button(self.working_frame, text=self.mat[int(tmp[i][0])], command=lambda :self.material_select(tmp[i])).grid(row=i, column=0,sticky="nsew",padx=4,pady=4)
-
+            tmpfunc = partial(self.material_select, tmp[i])
+            ttk.Button(canvas, text=self.mat[int(tmp[i][0])], command=tmpfunc).pack(side="top", padx=10, pady=10)
+        
     def material_select(self, id):
         print(id)
 
