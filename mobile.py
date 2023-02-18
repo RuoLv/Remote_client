@@ -28,7 +28,7 @@ class Mobile:
         sv_ttk.use_light_theme()
         self.root.title("喂料机配方-移动端 {}".format(version))
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
-        self.root.geometry("600x1024+0+0")
+        self.root.geometry("600x1024+0-20")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
         self.root.resizable(0, 0)
         self.nr_ball_option_var = tkinter.StringVar()
