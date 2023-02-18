@@ -28,7 +28,7 @@ class Mobile:
         sv_ttk.use_light_theme()
         self.root.title("喂料机配方-移动端 {}".format(version))
         self.root.iconphoto(True, tkinter.PhotoImage(file=logo_path))
-        self.root.geometry("600x1024+0-20")
+        self.root.geometry("600x974+0+0")
         self.root.protocol("WM_DELETE_WINDOW", self.closewin)
         self.root.resizable(0, 0)
         self.nr_ball_option_var = tkinter.StringVar()
@@ -83,7 +83,7 @@ class Mobile:
         if msgbox.askyesno("确认", "是否确认选择{}？".format(data)):
             self.nr_ball_nr = data[0:2]
             self.nr_select.pack_forget()
-            self.display.pack(side="left", fill="y", anchor="sw")
+            self.display.pack(side="top", fill="y",expand=1, anchor="sw")
         else:
             self.nr_ball_option_var.set("")
 
@@ -117,31 +117,29 @@ class Mobile:
         index = int(item)
         ori_data = self.data[index]
         if ori_data['status'] == "作业中" and ori_data['nr_ball'] != int(self.nr_ball_nr):
-            msgbox.showerror("错误", "该配方已有铲车作业中，如有特殊情况请联系管理员")
+            msgbox.showerror("错误", "该配方{}号球磨机正在装载中，如有特殊情况请联系管理员".format(ori_data['nr_ball']))
             return
             pass
         self.db.fresh_status(ori_data['id'],self.nr_ball_nr)
         self.display.pack_forget()
+        
+        self.show_material_frame = tkinter.Frame(self.data_frame,bg='red')
+        self.show_material_frame.pack(side="top",expand=1, fill="y", anchor="sw")
+
+        mate_vbar = tkinter.Scrollbar(self.show_material_frame, orient='vertical', width=60)
+
+        self.meterial_tv=ttk.Treeview(self.show_material_frame, columns=('name', 'status'),
+                               show='headings', height=1,  selectmode='browse', yscrollcommand=mate_vbar.set)
+        ttk.Style().configure("Treeview", font=("YouYuan", 20), rowheight=50)
+        self.meterial_tv.heading('name', text='名称')
+        self.meterial_tv.column('name', width=260,anchor='center')
+        self.meterial_tv.heading('status', text='状态')
+        self.meterial_tv.column('status',  width=200,anchor='center')
+        self.meterial_tv.pack(side="left", fill="y")
+        self.meterial_tv.bind("<Double-1>", self.on_meterial_select)
+        
 
 
-        canvas = tkinter.Canvas(self.data_frame,scrollregion=(0,0,520,1520))
-        canvas.pack(side="top", fill="both", expand=1)
-        self.working_frame = tkinter.Frame(canvas,bg="red")
-        self.working_frame.pack(side="top", fill="both", expand=1)
-        self.working_frame.pack_propagate(0)
-        vbar = tkinter.Scrollbar(canvas, orient='vertical', command=canvas.yview,width=60)
-        canvas.yview_moveto(0)
-        vbar.pack(side='right', fill='y')
-        canvas.configure(yscrollcommand=vbar.set)
-        canvas.create_window(0, 0, window=self.working_frame, anchor='nw')
-        tmp=[]
-        for i in range (30):
-            if ori_data['m_'+str(i)] == None:
-                print(ori_data['m_'+str(i)])
-                break
-            tmp.append(ori_data['m_'+str(i)].split(';'))
-            tmpfunc = partial(self.material_select, tmp[i])
-            ttk.Button(canvas, text=self.mat[int(tmp[i][0])], command=tmpfunc).pack(side="top", padx=10, pady=10)
         
     def material_select(self, id):
         print(id)
